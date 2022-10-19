@@ -1,5 +1,5 @@
 // const devtools = require('../node_modules/devtools-detect/index.js');
-import devtools from '../node_modules/devtools-detect/index.js';
+import devtools from 'node_modules/devtools-detect/index.js';
 
 window.addEventListener('load', function(){
     
