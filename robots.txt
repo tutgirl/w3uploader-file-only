@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: oauth/
+Crawl-delay: 20000
+
