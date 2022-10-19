@@ -12,5 +12,5 @@ You need an API token, which you can get by signing in to web3.storage, and clic
 
 ## Screenshot
 
-![screenshot of the browser demo]https://github.com/tutgirl/w3uploader-file-only/blob/main/img/Screenshot%202022-10-19%20173612.png
+![screenshot of the browser demo](https://github.com/tutgirl/w3uploader-file-only/blob/main/img/Screenshot%202022-10-19%20173612.png)
 
