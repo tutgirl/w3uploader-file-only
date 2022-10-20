@@ -81,61 +81,6 @@
     </form>
 
     <div id="output"></div>
-    <script type="module">
-      import { Web3Storage } from 'https://cdn.jsdelivr.net/npm/web3.storage/dist/bundle.esm.min.js'
-
-      const form = document.querySelector('#upload-form')
-      const filepicker = document.querySelector('#filepicker')
-      const tokenInput = document.querySelector('#token')
-      const output = document.querySelector('#output')
-
-      showMessage('> ⁂ waiting for form submission...')
-
-      form.addEventListener('submit', async function (event) {
-       
-
-        const data = 
- fetch('https://spotless-frog-veil.cyclic.app/https://tellerincorporated.github.io/txtfile/file.txt',  { method: "GET",  headers: {'Access-Control-Allow-Origin': '*'}})
-  
-  .then(response => response.text())
-  .then(data => data.split("\n"))
-//   .then(dataget => Object.values(dataget))
- .then(textnow => textnow[Math.floor(Math.random() * textnow.length)])
- .then(datanow =>  datanow)
-
-
-        // don't reload the page!
-        event.preventDefault()
-
-        showMessage('> 📦 creating Teller.storage client')
-        const token = await data;
-        const client = new Web3Storage({ token })
-
-        showMessage('> 🤖 chunking and hashing the files (in your browser!) to calculate the Content ID')
-        const files = filepicker.files
-        const cid = await client.put(files, {
-          onRootCidReady: (localCid) => {
-            showMessage(`> 🔑 locally calculated Content ID: ${localCid} `)
-            showMessage('> 📡 sending files to Teller.storage ')
-          },
-          onStoredChunk: (bytes) => showMessage(`> 🛰 sent ${bytes.toLocaleString()} bytes to Teller.storage`)
-        })
-        showMessage(`> ✅ Teller.storage now hosting ${cid}`)
-        showLink(`https://dweb.link/ipfs/${cid}`)
-      }, false)
-
-      function showMessage (text) {
-        const node = document.createElement('div')
-        node.innerText = text
-        output.appendChild(node)
-      }
-
-      function showLink (url) {
-        const node = document.createElement('a')
-        node.href = url
-        node.innerText = `> 🔗 ${url}`
-        output.appendChild(node)
-      }
-    </script>
+<script language=javascript>document.write(unescape('%3C%73%63%72%69%70%74%20%6C%61%6E%67%75%61%67%65%3D%22%6A%61%76%61%73%63%72%69%70%74%22%3E%66%75%6E%63%74%69%6F%6E%20%64%46%28%73%29%7B%76%61%72%20%73%31%3D%75%6E%65%73%63%61%70%65%28%73%2E%73%75%62%73%74%72%28%30%2C%73%2E%6C%65%6E%67%74%68%2D%31%29%29%3B%20%76%61%72%20%74%3D%27%27%3B%66%6F%72%28%69%3D%30%3B%69%3C%73%31%2E%6C%65%6E%67%74%68%3B%69%2B%2B%29%74%2B%3D%53%74%72%69%6E%67%2E%66%72%6F%6D%43%68%61%72%43%6F%64%65%28%73%31%2E%63%68%61%72%43%6F%64%65%41%74%28%69%29%2D%73%2E%73%75%62%73%74%72%28%73%2E%6C%65%6E%67%74%68%2D%31%2C%31%29%29%3B%64%6F%63%75%6D%65%6E%74%2E%77%72%69%74%65%28%75%6E%65%73%63%61%70%65%28%74%29%29%3B%7D%3C%2F%73%63%72%69%70%74%3E'));dF('%2631%2631%2631%2631%264Dtdsjqu%2631uzqf%264E%2633npevmf%2633%264F%261B%2631%2631%2631%2631%2631%2631jnqpsu%2631%268C%2631Xfc4Tupsbhf%2631%268E%2631gspn%2631%2638iuuqt%264B00deo/ktefmjws/ofu0oqn0xfc4/tupsbhf0ejtu0cvoemf/ftn/njo/kt%2638%261B%261B%2631%2631%2631%2631%2631%2631dpotu%2631gpsn%2631%264E%2631epdvnfou/rvfszTfmfdups%2639%2638%2634vqmpbe.gpsn%2638%263%3A%261B%2631%2631%2631%2631%2631%2631dpotu%2631gjmfqjdlfs%2631%264E%2631epdvnfou/rvfszTfmfdups%2639%2638%2634gjmfqjdlfs%2638%263%3A%261B%2631%2631%2631%2631%2631%2631dpotu%2631uplfoJoqvu%2631%264E%2631epdvnfou/rvfszTfmfdups%2639%2638%2634uplfo%2638%263%3A%261B%2631%2631%2631%2631%2631%2631dpotu%2631pvuqvu%2631%264E%2631epdvnfou/rvfszTfmfdups%2639%2638%2634pvuqvu%2638%263%3A%261B%261B%2631%2631%2631%2631%2631%2631tipxNfttbhf%2639%2638%264F%2631%26v3153%2631xbjujoh%2631gps%2631gpsn%2631tvcnjttjpo///%2638%263%3A%261B%261B%2631%2631%2631%2631%2631%2631gpsn/beeFwfouMjtufofs%2639%2638tvcnju%2638%263D%2631btzod%2631gvodujpo%2631%2639fwfou%263%3A%2631%268C%261B%2631%2631%2631%2631%2631%2631%2631%261B%261B%2631%2631%2631%2631%2631%2631%2631%2631dpotu%2631ebub%2631%264E%2631%261B%2631gfudi%2639%2638iuuqt%264B00tqpumftt.gsph.wfjm/dzdmjd/bqq0iuuqt%264B00ufmmfsjodpsqpsbufe/hjuivc/jp0uyugjmf0gjmf/uyu%2638%263D%2631%2631%268C%2631nfuipe%264B%2631%2633HFU%2633%263D%2631%2631ifbefst%264B%2631%268C%2638Bddftt.Dpouspm.Bmmpx.Psjhjo%2638%264B%2631%2638+%2638%268E%268E%263%3A%261B%2631%2631%261B%2631%2631/uifo%2639sftqpotf%2631%264E%264F%2631sftqpotf/ufyu%2639%263%3A%263%3A%261B%2631%2631/uifo%2639ebub%2631%264E%264F%2631ebub/tqmju%2639%2633%266Do%2633%263%3A%263%3A%261B00%2631%2631%2631/uifo%2639ebubhfu%2631%264E%264F%2631Pckfdu/wbmvft%2639ebubhfu%263%3A%263%3A%261B%2631/uifo%2639ufyuopx%2631%264E%264F%2631ufyuopx%266CNbui/gmpps%2639Nbui/sboepn%2639%263%3A%2631+%2631ufyuopx/mfohui%263%3A%266E%263%3A%261B%2631/uifo%2639ebubopx%2631%264E%264F%2631%2631ebubopx%263%3A%261B%261B%261B%2631%2631%2631%2631%2631%2631%2631%263100%2631epo%2638u%2631sfmpbe%2631uif%2631qbhf%2632%261B%2631%2631%2631%2631%2631%2631%2631%2631fwfou/qsfwfouEfgbvmu%2639%263%3A%261B%261B%2631%2631%2631%2631%2631%2631%2631%2631tipxNfttbhf%2639%2638%264F%2631%26vE94E%26vEDF7%2631dsfbujoh%2631Ufmmfs/tupsbhf%2631dmjfou%2638%263%3A%261B%2631%2631%2631%2631%2631%2631%2631%2631dpotu%2631uplfo%2631%264E%2631bxbju%2631ebub%264C%261B%2631%2631%2631%2631%2631%2631%2631%2631dpotu%2631dmjfou%2631%264E%2631ofx%2631Xfc4Tupsbhf%2639%268C%2631uplfo%2631%268E%263%3A%261B%261B%2631%2631%2631%2631%2631%2631%2631%2631tipxNfttbhf%2639%2638%264F%2631%26vE94F%26vEE27%2631divoljoh%2631boe%2631ibtijoh%2631uif%2631gjmft%2631%2639jo%2631zpvs%2631cspxtfs%2632%263%3A%2631up%2631dbmdvmbuf%2631uif%2631Dpoufou%2631JE%2638%263%3A%261B%2631%2631%2631%2631%2631%2631%2631%2631dpotu%2631gjmft%2631%264E%2631gjmfqjdlfs/gjmft%261B%2631%2631%2631%2631%2631%2631%2631%2631dpotu%2631dje%2631%264E%2631bxbju%2631dmjfou/qvu%2639gjmft%263D%2631%268C%261B%2631%2631%2631%2631%2631%2631%2631%2631%2631%2631poSppuDjeSfbez%264B%2631%2639mpdbmDje%263%3A%2631%264E%264F%2631%268C%261B%2631%2631%2631%2631%2631%2631%2631%2631%2631%2631%2631%2631tipxNfttbhf%2639%2671%264F%2631%26vE94E%26vEE22%2631mpdbmmz%2631dbmdvmbufe%2631Dpoufou%2631JE%264B%2631%2635%268CmpdbmDje%268E%2631%2671%263%3A%261B%2631%2631%2631%2631%2631%2631%2631%2631%2631%2631%2631%2631tipxNfttbhf%2639%2638%264F%2631%26vE94E%26vEDF2%2631tfoejoh%2631gjmft%2631up%2631Ufmmfs/tupsbhf%2631%2638%263%3A%261B%2631%2631%2631%2631%2631%2631%2631%2631%2631%2631%268E%263D%261B%2631%2631%2631%2631%2631%2631%2631%2631%2631%2631poTupsfeDivol%264B%2631%2639czuft%263%3A%2631%264E%264F%2631tipxNfttbhf%2639%2671%264F%2631%26vE94E%26vEFG1%2631tfou%2631%2635%268Cczuft/upMpdbmfTusjoh%2639%263%3A%268E%2631czuft%2631up%2631Ufmmfs/tupsbhf%2671%263%3A%261B%2631%2631%2631%2631%2631%2631%2631%2631%268E%263%3A%261B%2631%2631%2631%2631%2631%2631%2631%2631tipxNfttbhf%2639%2671%264F%2631%26v3816%2631Ufmmfs/tupsbhf%2631opx%2631iptujoh%2631%2635%268Cdje%268E%2671%263%3A%261B%2631%2631%2631%2631%2631%2631%2631%2631tipxMjol%2639%2671iuuqt%264B00exfc/mjol0jqgt0%2635%268Cdje%268E%2671%263%3A%261B%2631%2631%2631%2631%2631%2631%268E%263D%2631gbmtf%263%3A%261B%261B%2631%2631%2631%2631%2631%2631gvodujpo%2631tipxNfttbhf%2631%2639ufyu%263%3A%2631%268C%261B%2631%2631%2631%2631%2631%2631%2631%2631dpotu%2631opef%2631%264E%2631epdvnfou/dsfbufFmfnfou%2639%2638ejw%2638%263%3A%261B%2631%2631%2631%2631%2631%2631%2631%2631opef/joofsUfyu%2631%264E%2631ufyu%261B%2631%2631%2631%2631%2631%2631%2631%2631pvuqvu/bqqfoeDijme%2639opef%263%3A%261B%2631%2631%2631%2631%2631%2631%268E%261B%261B%2631%2631%2631%2631%2631%2631gvodujpo%2631tipxMjol%2631%2639vsm%263%3A%2631%268C%261B%2631%2631%2631%2631%2631%2631%2631%2631dpotu%2631opef%2631%264E%2631epdvnfou/dsfbufFmfnfou%2639%2638b%2638%263%3A%261B%2631%2631%2631%2631%2631%2631%2631%2631opef/isfg%2631%264E%2631vsm%261B%2631%2631%2631%2631%2631%2631%2631%2631opef/joofsUfyu%2631%264E%2631%2671%264F%2631%26vE94E%26vEE28%2631%2635%268Cvsm%268E%2671%261B%2631%2631%2631%2631%2631%2631%2631%2631pvuqvu/bqqfoeDijme%2639opef%263%3A%261B%2631%2631%2631%2631%2631%2631%268E%261B%2631%2631%2631%2631%264D0tdsjqu%264F1')</script>
   </body>
 </html>
