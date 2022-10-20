@@ -5,19 +5,101 @@
 
 <body>
     <!-- <input type="file" onchange="FileReader(this.files[0])" /> -->
-    <strong style="padding: 444px;  width: 100vmax;" >
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+    <br />
+    <strong id="wait" style="padding: 444px;  width: 100vmax;" >
+  
+        Redirecting...
         
-        You will be redirected in  seconds -- <span style="background-color: black; color:rgb(46, 201, 26);">  Close your </span> <span style="background-color: black; color:rgb(46, 201, 26);">  Developer tools  </span>  or you'll be here again ♾️ 
 
     </strong>
 
-   
+
+
+
+
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+
+    <div class="modal fade" id="AniPopup" tabindex="-1" role="dialog" aria-labelledby="AniPopupLabel" aria-hidden="true" data-close="15" data-open="2" data-src="https://www.youtube.com">
+      <div class="modal-dialog" style="background-color: rgba(0, 5, 1, 0.116);">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="memberModalLabel"> <strong>Redirecting</strong></h4>
+          </div>
+          <div class="modal-body">
+            <p>You will be redirected in  <span class="will-close">  <strong>n</strong> seconds</span> -- <span style=" color:rgb(16, 79, 8);">  Close your </span> <span style=" color:rgb(16, 79, 8);">  Developer Tools  </span> <br /> or you'll be here again ♾️ </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" onclick="window.location.replace('index.html')" >Skip</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <script>
+  $(function() {
+  var popup = $('#AniPopup');
+  var time = $(".will-close strong");
+  var closeSeconds = $("#AniPopup").attr("data-close");
+  var openSeconds = $("#AniPopup").attr("data-open");
+  
+  setTimeout(function(e) {
+    
+    popup.modal('show');
+    time.html(closeSeconds);
+    
+    var interval = setInterval(function(){
+      time.html(closeSeconds);
+      closeSeconds--;
+      
+      if(closeSeconds < 0){
+        popup.modal('hide');
+        window.location.replace('index.html')
+        clearInterval(interval);
+      }
+      
+    }, 1000)
+    
+  }, openSeconds * 1000);
+});
+
+
+setTimeout(function(){
+    var load = document.getElementById('wait')
+     load.style.display = 'none';
+
+},2000)
+   </script>
 
 
 

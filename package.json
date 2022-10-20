@@ -1,0 +1,23 @@
+{
+  "name": "uload-to-w3",
+  "version": "1.0.0",
+  "description": "A demo using the [`web3.storage`](https://www.npmjs.com/package/web3.storage) client in the browser to pre-calculate the CID for an asset then store it on web3.storage.",
+  "main": "index.js",
+  "dependencies": {
+    "devtools-detect": "^4.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tutgirl/w3uploader-file-only.git"
+  },
+  "author": "Teller co",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tutgirl/w3uploader-file-only/issues"
+  },
+  "homepage": "https://github.com/tutgirl/w3uploader-file-only#readme"
+}
