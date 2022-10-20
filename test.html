@@ -4,83 +4,25 @@
 </head>
 
 <body>
-    <input type="file" onchange="FileReader(this.files[0])" />
-    <button onclick="RandomText(TEXT)">Generate</button>
+    <!-- <input type="file" onchange="FileReader(this.files[0])" /> -->
+    <strong style="padding: 444px;  width: 100vmax;" >
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        
+        You will be redirected in  seconds -- <span style="background-color: black; color:rgb(46, 201, 26);">  Close your </span> <span style="background-color: black; color:rgb(46, 201, 26);">  Developer tools  </span>  or you'll be here again ♾️ 
 
-    <textholder id="p" class="px">
+    </strong>
 
-    </textholder>
-<br />
-    <p id="demo">
-  
-    </p>
+   
+
+
 
     <!-- <input type="text" id="p" disabled > -->
 
-    <script>
 
-        window.addEventListener('load', function(){
-            //alert('hi')
-
-           // $.get('files.txt', function(txt) {
-//var lines = txt.responseText.split("\n");
-//var randLineNum = Math.floor(Math.random() * lines.length);
-//return lines[randLineNum]; // random line from the text file
-//});
-const data = 
-  fetch('file.txt')
-  .then(response => response.text())
-  .then(data => data.split("\n"))
-//   .then(dataget => Object.values(dataget))
- .then(textnow => textnow[Math.floor(Math.random() * textnow.length)])
- .then(datanow =>  { return datanow})
-
-
-
-
-
-
-
-
-
- const printAddress = async () => {
-  const a = await data;
-//   console.log(a);
-}
-
-red = printAddress();
-
-
-console.log(red)
-
-
-
-//  .then(datanow => datanow)
-           
-
-//  var x = document.querySelectorAll('textholder')
-//  var y = document.getElementById("demo").innerHTML = JSON.stringify(obj.PromiseResult)
-// const data = fun()
-//   console.log(data)
-
-// console.log(data)
-   //outputs the content of the text file
-
-//         var TEXT = x;
-// async function FileReader(file) {
-//   TEXT = await file.text();
-// }
-// function RandomText(text) {
-//   const textArray = text.split("\n");
-//   const randomKey = Math.floor(Math.random() * textArray.length);
-//   console.log(textArray[randomKey]);
-// }
-
-        })
-
-
-
-
-    </script>
 </body>
 </html>
